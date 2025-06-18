@@ -1,7 +1,7 @@
 <<: !include power_meter_common.yaml
 
 esphome:
-  min_version: 2024.11.1
+  min_version: 2025.3.2
 
 # ----------------------------------------------------------------------------------------------------
 # Token management
@@ -81,7 +81,7 @@ script:
             - http_request.post:
                 url: "https://enlighten.enphaseenergy.com/login/login.json?"
                 capture_response: true
-                headers:
+                request_headers:
                   Content-Type: application/x-www-form-urlencoded
                 body: >
                   user[email]=${enphase_username}
